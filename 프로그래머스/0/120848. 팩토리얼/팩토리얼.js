@@ -1,0 +1,23 @@
+function solution(n) {
+    const cMap = new Map([
+          [1, 1],
+          [2, 2],
+          [3, 6],
+          [4, 24],
+          [5, 120],
+          [6, 720],
+          [7, 5040],
+          [8, 40320],
+          [9, 362880],
+          [10, 3628800],
+    ]);
+    for (let i=1; i<=cMap.size; i++) {
+        if (cMap.get(i) >= n) {
+            if (cMap.get(i) === n) {
+                return i;
+            }
+            return i-1;
+        }
+        
+    }
+}
